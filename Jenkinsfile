@@ -11,7 +11,7 @@ pipeline {
     }
     stage('build image') {
       steps {
-        sh 'podman build -t darinpope/hello-world:2023-11-18 .'
+        sh 'podman build -t alian2020/hello-world:2023-11-18 .'
       }
     }
     stage('Login to Docker Hub') {
