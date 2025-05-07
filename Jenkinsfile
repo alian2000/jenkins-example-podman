@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    DH_CREDS=credentials('dh-creds')
+    DH_CREDS=credentials('docker-hub-credentials')
   }
   stages {
     stage('Remove all images from agent') {
