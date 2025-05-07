@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { label 'slave1' }
   environment {
     DH_CREDS=credentials('docker-hub-credentials')
   }
