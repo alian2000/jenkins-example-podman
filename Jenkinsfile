@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'slave1' }
+  agent { label 'podman' }
   environment {
     DH_CREDS=credentials('docker-hub-credentials')
   }
