@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { label 'podman' }
   environment {
     DH_CREDS=credentials('docker-hub-credentials')
   }
@@ -21,14 +21,14 @@ pipeline {
     }
     stage('Tag the image') {
       steps {
-        sh 'podman tag darinpope/hello-world:2023-11-18 darinpope/hello-world:latest'
+        sh 'podman tag alian2020/hello-world:2023-11-18 alian2020/hello-world:latest'
       }
     }
     stage('Push the image') {
       steps {
         sh '''
-          podman push darinpope/hello-world:2023-11-18
-          podman push darinpope/hello-world:latest
+          podman push alian2020/hello-world:2023-11-18
+          podman push alian2020/hello-world:latest
         '''
       }
     }
